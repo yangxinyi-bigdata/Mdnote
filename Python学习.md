@@ -1305,3 +1305,104 @@ Button.click();
 
 直播标题 主播 观看人数 游戏名  前十页
 
+
+
+# Scikit-Learn入门
+
+聚类算法非常重要: DBSCAN, 层次聚类.
+
+Scikit-Learn提供了非常丰富的API.
+
+如果你掌握了其中一种模型的用法, 其他模型可以非常平滑的过度上去.
+
+## 1. 数据表示
+
+ 基本的数据表就是二维网格数据，其中的每一行表示数据集中的每个样本，而列列表示构成每个样本的
+相关特征。例如之前所使用的iris鸢尾花数据集，行数表示数据集中记录的鸢尾花总数，每列列数据表示每个样本某个特征的量量化值，同时对于有监督学习算法的数据集⽽而⾔言，还需要有⼀一列列特征充当标签列列。同时，在读取数据的过程中，我们常常把数据读取保存为DataFrame格式，从而方便对数据集本身进行探索和预处理理。
+
+````python
+import numpy as np
+import pandas as pd
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+````
+
+````python
+iris = pd.read_csv('iris.txt', header=None)
+````
+
+同时，将DF作为数据接口，在进行后续数据格式转换时也非常方便。例如在Scikit-Learn中，很多模型需要以Numpy数组作为输入数据，此时可以使用Pandas的pa.values将原始DF转化为算法库要求的array数据格式。同时，对于Scikit-Learn而言，要求数据集特征列和标签列单独存放至两个数组中，而数据集的特征列往往有多列，因此输入特征往往以二维数组进行表示，也被称为特征矩阵，而存放标签列的数组，往往也被称为目标数组。
+
+## 2. 特征矩阵(features matrix)
+
+特征矩阵通常被记为变量X, 它是维度为[n_samples, n_features]的二维矩阵, 通常可以用Numpy数据或者Pandas的DataFrame来表示, 
+
+
+
+# PySpark知识点总结:
+
+在企业里面, 一旦用惯了的环境和软件, 是非常不愿意换的, 因为一旦换了就有可能出现很多不必要的问题.
+
+只有在没有办法完成现在的工作的时候, 才会考虑换新的软件.
+
+## python2.7和python3.5共存
+
+1. 安装anaconda2, 官网下载
+2. 配置anaconda2的环境变量
+3. 打开cmd, 输入python确认环境变成python2.7, 即可表示成功
+
+也可以使用这种更灵活的方法
+
+https://blog.csdn.net/l_s_f123/article/details/77841973
+
+在这个页面的介绍方法
+
+````python
+conda create -n python27 python=2.7 anaconda
+````
+
+上面的代码创建了一个名为python27的python2.7的环境，最后一个参数表示安装anaconda下python2.7的所有默认包，这个参数时可选的。 
+截止到这里，我们实现了在win10环境上，python2和python3的共存。 
+下面介绍python2和python3版本的相互转换。 
+我们进入cmd环境，现在默认的python版本时python3.6。只需要一行简单的代码就可以转为python2.7的环境。
+
+```python
+activate python27
+```
+
+此时，本窗口下的python版本变为了python2.7。那么，你肯定猜到了恢复到python3.6的命令：
+
+```
+deactivate python271
+```
+
+其实呢，一般没有必要恢复到原环境。只要打开一个新的cmd窗口，默认的python版本就是python3.6。
+
+![1528511858618](pictures/112)
+
+Pycharm安装方法
+
+首先下载开发版, 安装后, 先用老师发的"pyharm激活"文档激活方法, 将开发版本激活.
+
+激活后选择python9创建一个新项目, 选择路径.
+
+然后在设置里面的Project Interpreter, 点击后面的设置图标, add local, 选择需要的python2或者3解释器.选择ok
+
+将 C:\Users\Administrator\PycharmProjects\PySpark\spark-1.6.3-bin-hadoop2.4\python\lib下的两个包 
+
+py4j以及pyspark拷贝到C:\Anaconda2\Lib\site-packages目录下 
+
+### 传统的分析思路
+
+1. 对文件源进行分类, 并对数据进行分类
+   1. 本项目中我们分成cs_interaction| influence| keyword_interaction| menu_interaction| userinfo
+2. 设计表的结构, 产生ddl语句
+3. 使用大数据框架Spark对源文件进行分析
+4. 将分析到的结果插入到目标数据库中.
+
+### 将某些数据直接生成词云
+
+1. 将原始数据直接用Spark框架分析处理, 统计出关键词, 并用词云的可视化工具进行展示
+2. 分析结果作为对象插入到数据库中, 方便后续的分析挖掘.
+
+root的密码010025 
