@@ -171,13 +171,13 @@ The definition of Machine learning：
 
 A computer program is said to learn fromexperience E with respect to some class of tasks T and performance measure P,if its performance at tasks in T, as measured by P, improves with experience E
 
-![1525084666598](../pictures/6)
+![1525084666598](/pictures/6)
 
 ### MLlib基本结构
 
-![1525084732623](../pictures/7)
+![1525084732623](/pictures/7)
 
-![1525084747704](../pictures/8)
+![1525084747704](/pictures/8)
 
  
 
